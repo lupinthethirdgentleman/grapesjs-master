@@ -69,7 +69,7 @@ module.exports = () => {
      * @param {Object} methods Object representing the trait
      */
     addType(name, trait) {
-      // console.log("addType");
+      console.log("addType");
       
       var itemView = TraitsViewer.itemView;
       // console.log(itemView);

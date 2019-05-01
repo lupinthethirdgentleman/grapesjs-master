@@ -3,7 +3,6 @@ import { isUndefined } from 'underscore';
 
 module.exports = Backbone.View.extend({
   initialize(o) {
-    // console.log("remove");
     this.opts = o || {};
     this.config = o.config || {};
     const coll = this.collection;
@@ -13,7 +12,7 @@ module.exports = Backbone.View.extend({
   },
 
   removeChildren(removed, coll, opts = {}) {
-    
+    console.log("remove");
     const em = this.config.em;
     const view = removed.view;
     const tempComp = removed.opt.temporary;

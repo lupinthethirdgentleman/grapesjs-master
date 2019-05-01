@@ -38,7 +38,7 @@ module.exports = () => {
       const ppfx = c.pStylePrefix;
       ppfx && (c.stylePrefix = `${ppfx}${c.stylePrefix}`);
       TraitsViewer = new TraitsView({
-        collection: [],
+        // collection: [],
         editor: c.em,
         config: c
       });
@@ -69,7 +69,6 @@ module.exports = () => {
      * @param {Object} methods Object representing the trait
      */
     addType(name, trait) {
-      // console.log("addType");
       
       var itemView = TraitsViewer.itemView;
       // console.log(itemView);

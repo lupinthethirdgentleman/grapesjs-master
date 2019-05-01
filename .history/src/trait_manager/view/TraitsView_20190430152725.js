@@ -19,13 +19,45 @@ module.exports = DomainViews.extend({
   },
 
   initialize(o = {}) {
-    
+    domComps.addType('input', {
+      model: dModel.extend({
+        defaults: Object.assign({}, dModel.prototype.defaults, {
+          traits: [
+            // strings are automatically converted to text types
+            'name',
+            'placeholder',
+            {
+              type: 'select',
+              label: 'Type',
+              name: 'type',
+              options: [
+                {value: 'text', name: 'Text'},
+                {value: 'email', name: 'Email'},
+                {value: 'password', name: 'Password'},
+                {value: 'number', name: 'Number'},
+              ]
+            }, {
+              type: 'checkbox',
+              label: 'Required',
+              name: 'required',
+          }],
+        }),
+      }, {
+        isComponent: function(el) {
+          if(el.tagName == 'INPUT'){
+            return {type: 'input'};
+          }
+        },
+      }),
+  
+      view: dView,
+  });
     // console.log("click");
     const config = o.config || {};
     this.config = config;
     this.em = o.editor;
     
-    console.log(this.em.DomComponents);
+    // console.log(this.em.getSelected());
     this.pfx = config.stylePrefix || '';
     this.ppfx = config.pStylePrefix || '';
     this.className = this.pfx + 'traits';

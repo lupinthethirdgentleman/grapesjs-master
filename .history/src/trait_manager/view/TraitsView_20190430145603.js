@@ -11,21 +11,19 @@ module.exports = DomainViews.extend({
 
   itemsView: {
     text: TraitView,
-    number: TraitNumberView,
-    select: TraitSelectView,
-    checkbox: TraitCheckboxView,
-    color: TraitColorView,
-    button: TraitButtonView
+    // number: TraitNumberView,
+    // select: TraitSelectView,
+    // checkbox: TraitCheckboxView,
+    // color: TraitColorView,
+    // button: TraitButtonView
   },
 
   initialize(o = {}) {
-    
     // console.log("click");
     const config = o.config || {};
     this.config = config;
     this.em = o.editor;
-    
-    console.log(this.em.DomComponents);
+    // console.log(this.em.getSelected());
     this.pfx = config.stylePrefix || '';
     this.ppfx = config.pStylePrefix || '';
     this.className = this.pfx + 'traits';
@@ -44,7 +42,7 @@ module.exports = DomainViews.extend({
     const ppfx = this.ppfx;
     const comp = this.em.getSelected();
     // console.log(this.em);
-    // console.log(this.em.getSelected().attributes.tagName);//check is container
+    console.log(this.em.getSelected().attributes.tagName);//check is container
     this.el.className = `${this.className} ${ppfx}one-bg ${ppfx}two-color`;
     this.collection = comp ? comp.get('traits') : [];
     this.render();

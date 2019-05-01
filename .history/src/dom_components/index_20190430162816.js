@@ -587,7 +587,7 @@ module.exports = () => {
      * @return {Object} Component type defintion, eg. `{ model: ..., view: ... }`
      */
     getType(type) {
-      // console.log("dom");
+      console.log("dom");
       var df = componentTypes;
 
       for (var it = 0; it < df.length; it++) {

@@ -44,7 +44,7 @@ module.exports = require('backbone').Model.extend({
     // when text editor change this function is called
     const name = this.get('name');
     const target = this.target;
-    // console.log(target);
+    console.log(target);
     let value;
 
     if (this.get('changeProp')) {

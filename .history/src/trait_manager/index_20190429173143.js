@@ -40,7 +40,7 @@ module.exports = () => {
       TraitsViewer = new TraitsView({
         collection: [],
         editor: c.em,
-        config: c
+        // config: c
       });
       return this;
     },
@@ -69,7 +69,6 @@ module.exports = () => {
      * @param {Object} methods Object representing the trait
      */
     addType(name, trait) {
-      // console.log("addType");
       
       var itemView = TraitsViewer.itemView;
       // console.log(itemView);

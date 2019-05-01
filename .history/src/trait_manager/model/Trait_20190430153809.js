@@ -34,7 +34,7 @@ module.exports = require('backbone').Model.extend({
   },
 
   targetUpdated() {
-    // console.log("changed");
+    console.log("changed");
     // when text editor change this function is called
     const value = this.getTargetValue();
     this.set({ value }, { fromTarget: 1 });

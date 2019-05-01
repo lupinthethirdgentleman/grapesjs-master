@@ -88,7 +88,7 @@ module.exports = () => {
 
     render() {
       
-      return TraitsViewer.render().el;
+      // return TraitsViewer.render().el;
     },
     // isComponent: function(el) {
     //   console.log(el.tagName());

@@ -29,7 +29,10 @@
           This is a demo content from index.html. For the development, you shouldn't edit this file, instead you can
           copy and rename it to _index.html, on next server start the new file will be served, and it will be ignored by git.
         </div>
-        <container>This is container.</container>
+        <div>
+          <img src="https://path/image" />
+          <span title="foo">bar</span>
+        </div>
         <!-- <contanier id="blocks">
           This tag is container
         </container> -->
@@ -119,10 +122,10 @@
 
     <script type="text/javascript">
 
-//     isComponent: function(el) {
-//   if(el.tagName == 'IMG')
-//     return {type: 'image'};
-// }
+    isComponent: function(el) {
+      if(el.tagName == 'IMG')
+        return {type: 'image'};
+    }
     // flag = true;
 
     function myPlugin(editor){

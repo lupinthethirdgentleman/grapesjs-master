@@ -11,7 +11,7 @@ module.exports = Backbone.View.extend({
   },
 
   tagName() {
-    // console.log(this.model.get('tagName'));
+    // console.log("tagname");
     return this.model.get('tagName');
   },
 

@@ -459,7 +459,7 @@ const Component = Backbone.Model.extend(Styleable).extend(
      * // -> [SelectorObject, ...]
      */
     removeClass(classes) {
-      // console.log("class removed");
+      console.log("class removed");
       const removed = [];
       classes = isArray(classes) ? classes : [classes];
       const selectors = this.get('classes');
@@ -751,7 +751,6 @@ const Component = Backbone.Model.extend(Styleable).extend(
      * @return {String}
      * */
     getName() {
-      // console.log("here");
       let customName = this.get('name') || this.get('custom-name');
       let tag = this.get('tagName');
       tag = tag == 'div' ? 'box' : tag;

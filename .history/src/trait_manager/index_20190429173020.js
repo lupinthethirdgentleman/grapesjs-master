@@ -34,7 +34,7 @@ module.exports = () => {
       // console.log("trait_manager");
       c = config;
       defaults(c, defaultOpts);
-      console.log(c);
+      // console.log(c);
       const ppfx = c.pStylePrefix;
       ppfx && (c.stylePrefix = `${ppfx}${c.stylePrefix}`);
       TraitsViewer = new TraitsView({
@@ -69,7 +69,6 @@ module.exports = () => {
      * @param {Object} methods Object representing the trait
      */
     addType(name, trait) {
-      // console.log("addType");
       
       var itemView = TraitsViewer.itemView;
       // console.log(itemView);

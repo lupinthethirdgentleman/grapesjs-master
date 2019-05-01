@@ -751,7 +751,6 @@ const Component = Backbone.Model.extend(Styleable).extend(
      * @return {String}
      * */
     getName() {
-      // console.log("here");
       let customName = this.get('name') || this.get('custom-name');
       let tag = this.get('tagName');
       tag = tag == 'div' ? 'box' : tag;

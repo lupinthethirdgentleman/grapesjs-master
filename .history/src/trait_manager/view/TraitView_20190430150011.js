@@ -168,7 +168,7 @@ module.exports = Backbone.View.extend({
   },
 
   isComponent: function(el) {
-    // console.log(el.tagName);
+    console.log(el.tagName);
     // return {type: 'image'};
   }
 });

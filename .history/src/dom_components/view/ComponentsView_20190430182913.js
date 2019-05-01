@@ -3,7 +3,7 @@ import { isUndefined } from 'underscore';
 
 module.exports = Backbone.View.extend({
   initialize(o) {
-    // console.log("remove");
+    console.log("remove");
     this.opts = o || {};
     this.config = o.config || {};
     const coll = this.collection;
